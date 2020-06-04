@@ -1,0 +1,82 @@
+@import "../../../../styles/_vars.scss";
+.header {
+  background: $main-color;
+  border-bottom: 1px solid $border-color;
+  height: $navbar-mobile-height;
+  .headerNav {
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    // justify-content: start;
+    padding: 0 1rem;
+    .navToggleButton {
+      z-index: 1;
+      justify-self: start;
+      align-self: center;
+    }
+    .navLogo {
+      width: 100%;
+      align-self: center;
+      font-size: 16px;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+    }
+    .navSearchInput {
+      display: grid;
+      width: 100%;
+      input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+      }
+    }
+    .navSearchIcon {
+      display: grid;
+      justify-self: end;
+      align-content: center;
+      margin-left: 6px;
+    }
+    .navItems {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li {
+          padding: 0 0.5rem;
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .navItems a:hover,
+    .navItems a:active {
+      color: #fa923f;
+    }
+  }
+  .headerNavSearch {
+    justify-content: start;
+    grid-template-columns: 50px 1fr;
+  }
+}
+
+// @media (max-width: 768px) {
+//   .navItems {
+//     display: none;
+//   }
+// }
+
+// @media (min-width: 769px) {
+//   .navToggleButton {
+//     display: none;
+//   }
+//   .navLogo {
+//     margin-left: 0;
+//   }
+// }

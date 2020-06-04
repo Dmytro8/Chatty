@@ -1,0 +1,35 @@
+@import "../../styles/_vars.scss";
+.avatarItem {
+  height: inherit;
+  position: relative;
+  .avatarImg {
+    height: inherit;
+    border-radius: 50%;
+    overflow: hidden;
+    display: grid;
+    background-color: $accent-color;
+    span {
+      justify-self: center;
+      align-self: center;
+      font-size: 20px;
+      height: 20px;
+      color: white;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .onlineStatus {
+    top: 70%;
+    right: 0;
+    position: absolute;
+    span {
+      width: 14px;
+      display: block;
+      height: 14px;
+      border-radius: 50%;
+      background: $success;
+      border: 2px solid white;
+    }
+  }
+}

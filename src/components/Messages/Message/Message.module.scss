@@ -1,0 +1,112 @@
+@import "../../../styles/_vars.scss";
+.message {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  .messageAvatar {
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 40px;
+    align-self: end;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
+  .messageContent {
+    margin-left: 10px;
+    text-align: start;
+    .messageBubbleWrapper {
+      display: grid;
+      grid-auto-flow: column;
+      svg {
+        grid-column: 2;
+        align-self: end;
+        margin-left: 10px;
+        color: $success;
+      }
+      .messageBubble {
+        background: $accent-color;
+        box-shadow: 0px 5px 5px rgba(142, 36, 170, 0.1);
+        padding: 10px 20px;
+        border-radius: 10px 10px 10px 0px;
+        max-width: 400px;
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .messageBody {
+      line-height: 20px;
+      color: #fff;
+    }
+    .messageDate {
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  }
+  &.messageMe {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    &#{&} {
+      .messageAvatar {
+        grid-column: 2;
+      }
+      .messageContent {
+        margin-left: 0;
+        margin-right: 10px;
+        text-align: end;
+        .messageBubbleWrapper {
+          display: grid;
+          grid-auto-flow: column;
+          svg {
+            align-self: end;
+            margin-right: 10px;
+            grid-column: 1;
+            // color: $success;
+          }
+          .messageBubble {
+            border-radius: 10px 10px 0px 10px;
+          }
+        }
+      }
+    }
+  }
+  &.messageIsTyping {
+    &#{&} {
+      .messageBubble {
+        background: #e6e7ed;
+        box-shadow: 0px 5px 5px #e6e7ed8c;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 8px;
+
+        p {
+          display: none;
+        }
+        span {
+          display: block;
+          width: 8px;
+          height: 8px;
+          background-color: #9e9ea1;
+          border-radius: 50%;
+          opacity: 0.4;
+          @for $i from 1 through 3 {
+            &:nth-of-type(#{$i}) {
+              animation: myblink 1s infinite ($i * 0.3333s);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes myblink {
+  50% {
+    opacity: 1;
+  }
+}

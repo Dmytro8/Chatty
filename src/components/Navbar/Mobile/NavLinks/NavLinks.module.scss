@@ -1,0 +1,22 @@
+@import "../../../../styles/_vars.scss";
+nav {
+  ul {
+    margin-left: 25px;
+    li {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: start;
+      align-items: center;
+      margin: 20px 0;
+      color: $text-grey;
+      a {
+        color: $text-grey;
+        display: contents;
+      }
+      h4 {
+        color: $text-grey;
+        margin-left: 25px;
+      }
+    }
+  }
+}

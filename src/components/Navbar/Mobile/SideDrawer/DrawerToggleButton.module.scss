@@ -1,0 +1,34 @@
+@import "../../../../styles/_vars.scss";
+
+.toggleButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  .toggleButtonLine {
+    width: 30px;
+    height: 2px;
+    background: $accent-color;
+    transition: 0.3s all;
+  }
+  .toggleButtonLine.active:nth-child(1) {
+    transform: translateX(-1px) translateY(3px) rotate(-40deg);
+    width: 50%;
+    transition: 0.3s all;
+  }
+  .toggleButtonLine.active:nth-child(3) {
+    transform: translateX(-1px) translateY(-3px) rotate(40deg);
+    width: 50%;
+    transition: 0.3s all;
+  }
+}
+
+.toggleButton:focus {
+  outline: none;
+}

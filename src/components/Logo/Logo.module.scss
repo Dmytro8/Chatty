@@ -1,0 +1,24 @@
+@import "../../styles/_vars.scss";
+@font-face {
+  font-family: "FredokaOne";
+  src: url("../../styles/fonts/Fredoka_One/FredokaOne-Regular.ttf")
+    format("truetype");
+}
+
+.logoWrapper {
+  display: grid;
+  justify-content: center;
+  margin: 0 !important;
+  letter-spacing: 1px;
+  h1 {
+    font-family: "FredokaOne" !important;
+    color: rgb(78, 78, 78);
+    // font-size: 26px;
+    margin: 0;
+    span {
+      font-family: "FredokaOne" !important;
+      color: $accent-color;
+      letter-spacing: 1px;
+    }
+  }
+}

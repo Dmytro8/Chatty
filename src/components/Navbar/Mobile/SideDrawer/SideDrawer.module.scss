@@ -1,0 +1,43 @@
+@import "../../../../styles/_vars.scss";
+.sideDrawer {
+  width: 75vw;
+  .profilePanel {
+    display: grid;
+    justify-items: center;
+    background: $main-color;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 20px;
+    .avatarWrapper {
+      width: 60px;
+      margin: 20px 0;
+    }
+    .profileName {
+      justify-self: start;
+      margin-left: 25px;
+    }
+  }
+  nav {
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+.sideDrawer.open {
+  transform: translateX(0);
+}
+
+.sideDrawer a:hover,
+.sideDrawer a:active {
+  // color: #fa923f;
+}
+
+@media (min-width: 769px) {
+  .sideDrawer {
+    display: none;
+  }
+}
+@media (min-width: 425px) {
+  .sideDrawer {
+    width: 300px;
+  }
+}

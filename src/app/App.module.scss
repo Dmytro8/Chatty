@@ -1,0 +1,54 @@
+@import "../styles/_vars.scss";
+@font-face {
+  font-family: "VarelaRound";
+  src: url("../styles/fonts/Varela_Round/VarelaRound-Regular.ttf")
+    format("truetype");
+}
+html,
+body {
+  font-family: "VarelaRound";
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: rgb(54, 54, 54);
+  outline: none;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: 0;
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: rgb(54, 54, 54);
+}
+p {
+  color: rgb(54, 54, 54);
+}
+::-webkit-search-cancel-button {
+  // -webkit-appearance: none; /* hide the default "X" button */
+}
+
+::-webkit-search-cancel-button:after {
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

@@ -1,0 +1,58 @@
+@import "../../../styles/_vars.scss";
+.header {
+  height: inherit;
+  display: grid;
+  // align-content: center;
+  grid-auto-flow: column;
+  // grid-template-columns: minmax(900px, auto);
+  .logoWrapper {
+    font-size: 15px;
+    align-self: center;
+    justify-self: start;
+    margin-left: 100px;
+  }
+  .rightSide {
+    justify-self: end;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: end;
+    gap: 10px;
+    .notificationIcon {
+      margin-right: 30px;
+      :hover {
+        cursor: pointer;
+      }
+    }
+    .avatarWrapper {
+      width: 50px;
+      height: 50px;
+    }
+    .menuButton {
+      display: grid;
+      grid-auto-flow: column;
+      height: 100%;
+      align-content: center;
+      padding: 0 5px;
+      grid-auto-columns: max-content;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      .profileData {
+        padding-right: 20px;
+        justify-self: start;
+        align-self: center;
+      }
+      .arrowUp {
+        justify-self: end;
+        transition: 0.2s transform ease-in-out;
+      }
+      .arrowDown {
+        justify-self: end;
+        transition: 0.2s transform ease-in-out;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

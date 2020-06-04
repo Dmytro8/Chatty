@@ -1,0 +1,137 @@
+@import "../../styles/_vars.scss";
+.chatSection {
+  display: grid;
+  grid-auto-flow: column;
+  position: relative;
+  grid-template-columns: minmax(600px, 1fr) minmax(300px, 20vw);
+  width: 100%;
+  height: 100%;
+  .chat {
+    padding: 0 25px;
+    display: grid;
+    grid-template-rows: 80px auto 80px;
+    .chatHeader {
+      display: grid;
+      grid-auto-flow: column;
+      .leftSide {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        .imgWrapper {
+          width: 70px;
+          height: 70px;
+        }
+      }
+      .rightSide {
+        align-self: center;
+        justify-self: end;
+        span {
+          font-size: 27px;
+          color: $accent-color;
+          height: 27px;
+          display: block;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .chatContent {
+      align-self: stretch;
+      position: relative;
+      .messagesWrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        display: grid;
+        .messagesScroll {
+          overflow: auto;
+        }
+      }
+    }
+    .chatFooter {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 30px 1fr auto;
+      gap: 20px;
+      border-top: 1px solid $border-color;
+      .attach {
+        align-self: center;
+        transform: rotate(45deg);
+        color: rgb(110, 110, 110);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .send {
+        transform: rotate(-45deg);
+        color: white;
+        background-color: #8e24aa;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        align-self: center;
+        padding: 12px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      input {
+        border: none;
+        font-size: 18px;
+      }
+    }
+  }
+  .userSidePanel {
+    border-left: 1px solid $border-color;
+    .userTopPanel {
+      height: 250px;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      h2 {
+        margin-top: 20px;
+      }
+      .userSideAvatar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    section {
+      box-shadow: 0px 0px 10px -4px rgb(185, 185, 185);
+      margin: 20px 0;
+      padding: 10px 20px;
+    }
+    .sectionItem {
+      margin-top: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $border-color;
+      &:last-child {
+        border-bottom: none;
+      }
+      h4 {
+        font-weight: 500;
+        color: $text-grey;
+      }
+      h5 {
+        font-size: 15px;
+        color: $text-grey-light;
+        font-weight: 300;
+        letter-spacing: 0px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+@media (max-width: 1264px) {
+  .chatSection {
+    grid-template-columns: unset;
+  }
+  .userSidePanel {
+    display: none;
+  }
+}

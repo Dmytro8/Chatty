@@ -1,0 +1,25 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paper {
+  border: none;
+  margin: 0 5%;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 2px 2px white;
+  padding: 30px 20px;
+}
+.cancelIcon {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .paper {
+    margin: unset;
+    width: 400px;
+  }
+}
