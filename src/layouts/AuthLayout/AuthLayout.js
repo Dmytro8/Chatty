@@ -1,11 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { purple } from "@material-ui/core/colors";
 
 import classes from "./Authlayout.module.scss";
 import { SIGNUP, LOGIN } from "../../constants/url";
+
+import { motion } from "framer-motion";
+
 const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[600]),
@@ -20,35 +23,94 @@ const ColorButton = withStyles((theme) => ({
   },
 }))(Button);
 
+const ballsVariants = {
+  animation: {
+    y: [0, -10],
+    x: 0,
+  },
+};
+
 export const AuthLayout = (props) => {
+  const location = useLocation();
+
   return (
     <div className={classes.container}>
       <div className={classes.panel}>
         <div className={classes.authHeader}>
           <div className={classes.loginButton}>
-            <Link to={LOGIN}>
-              <ColorButton variant="contained"> Login</ColorButton>
-            </Link>
+            {location.pathname !== LOGIN ? (
+              <Link to={LOGIN}>
+                <ColorButton variant="contained">Login</ColorButton>
+              </Link>
+            ) : (
+              <ColorButton variant="contained">Login</ColorButton>
+            )}
           </div>
         </div>
         <div className={classes.circles}>
-          <span className={classes.circles1}></span>
-          <span className={classes.circles2}></span>
-          <span className={classes.circles3}></span>
+          <motion.span
+            variants={ballsVariants}
+            animate="animation"
+            transition={{
+              y: { yoyo: Infinity, duration: 0.8, ease: "easeInOut" },
+            }}
+            className={classes.circles1}
+          ></motion.span>
+          <motion.span
+            variants={ballsVariants}
+            animate="animation"
+            transition={{
+              y: { yoyo: Infinity, duration: 1, ease: "easeInOut" },
+            }}
+            className={classes.circles2}
+          ></motion.span>
+          <motion.span
+            variants={ballsVariants}
+            animate="animation"
+            transition={{
+              y: { yoyo: Infinity, duration: 1.2, ease: "easeInOut" },
+            }}
+            className={classes.circles3}
+          ></motion.span>
         </div>
       </div>
       <div>{props.children}</div>
       <div className={classes.panel}>
         <div className={classes.circles}>
-          <span className={classes.circles3}></span>
-          <span className={classes.circles2}></span>
-          <span className={classes.circles1}></span>
+          <motion.span
+            variants={ballsVariants}
+            animate="animation"
+            transition={{
+              y: { yoyo: Infinity, duration: 1.2, ease: "easeInOut" },
+            }}
+            className={classes.circles3}
+          ></motion.span>
+          <motion.span
+            variants={ballsVariants}
+            animate="animation"
+            transition={{
+              y: { yoyo: Infinity, duration: 1, ease: "easeInOut" },
+            }}
+            className={classes.circles2}
+          ></motion.span>
+          <motion.span
+            variants={ballsVariants}
+            animate="animation"
+            transition={{
+              y: { yoyo: Infinity, duration: 0.8, ease: "easeInOut" },
+            }}
+            className={classes.circles1}
+          ></motion.span>
         </div>
         <div className={classes.authHeader}>
           <div className={classes.signUpButton}>
-            <Link to={SIGNUP}>
+            {location.pathname !== SIGNUP ? (
+              <Link to={SIGNUP}>
+                <ColorButton variant="contained">Sign up</ColorButton>
+              </Link>
+            ) : (
               <ColorButton variant="contained">Sign up</ColorButton>
-            </Link>
+            )}
           </div>
         </div>
       </div>
