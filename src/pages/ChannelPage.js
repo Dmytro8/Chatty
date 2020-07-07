@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { UserContext, ProfileContext } from "../context/ProfileContext";
+import { UserContext, ProfileContext } from "../contexts/ProfileContext";
 
 export const ChannelPage = () => {
   const { profile } = useContext(ProfileContext);

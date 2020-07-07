@@ -4,7 +4,7 @@ import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import classes from "./DesktopNavbar.module.scss";
 import { Logo } from "../../Logo";
 import { ProfileAvatar } from "../../ProfileAvatar/ProfileAvatar";
-import { ProfileContext } from "../../../context/ProfileContext";
+import { ProfileContext } from "../../../contexts/ProfileContext";
 
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import CustomizedMenus from "../../common/MenuControl";

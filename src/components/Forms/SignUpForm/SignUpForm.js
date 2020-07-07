@@ -12,7 +12,7 @@ import Grid from "@material-ui/core/Grid";
 import { StyledTextField, AccentButton } from "../../common/FormControls";
 import { Logo } from "../../Logo";
 import { useHttp } from "../../../hooks/httpHook";
-import { AuthContext } from "../../../context/AuthContext";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 export const SignUpForm = () => {
   const { loading, request, error, clearError } = useHttp();

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ProfileContext } from "../../context/ProfileContext";
+import { ProfileContext } from "../../contexts/ProfileContext";
 
 import classes from "./SearchPage.module.scss";
 import { useHttp } from "../../hooks/httpHook";

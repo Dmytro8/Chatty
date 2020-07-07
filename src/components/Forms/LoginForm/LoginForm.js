@@ -18,7 +18,7 @@ import {
 import { LoginSchema } from "../FormValidation";
 import { Logo } from "../../Logo";
 import { useHttp } from "../../../hooks/httpHook";
-import { AuthContext } from "../../../context/AuthContext";
+import { AuthContext } from "../../../contexts/AuthContext";
 import { authenticatedSocketEmit } from "../../../utils/Sockets/emitSockets";
 
 export const LoginForm = () => {

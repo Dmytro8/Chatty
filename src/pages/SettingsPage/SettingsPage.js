@@ -4,8 +4,8 @@ import { useHttp } from "../../hooks/httpHook";
 
 import { DeleteAccountModal } from "../../components/Modals/DeleteAccountModal/DeleteAccountModal";
 import { ProfileAvatar } from "../../components/ProfileAvatar/ProfileAvatar";
-import { ProfileContext } from "../../context/ProfileContext";
-import { AuthContext } from "../../context/AuthContext";
+import { ProfileContext } from "../../contexts/ProfileContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 import classes from "./SettingsPage.module.scss";
 

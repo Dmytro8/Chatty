@@ -5,7 +5,7 @@ import { Toolbar } from "./Toolbar";
 import { SideDrawer } from "./SideDrawer";
 
 import classes from "./MobileNavbar.module.scss";
-import { ProfileContext } from "../../../context/ProfileContext";
+import { ProfileContext } from "../../../contexts/ProfileContext";
 
 export const MobileNavbar = () => {
   const [isSideDrawerOpened, setIsSideDrawerOpened] = useState(false);

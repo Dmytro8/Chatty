@@ -3,7 +3,7 @@ import classnames from "classnames/bind";
 
 import classes from "./LaptopDesktopLayout.module.scss";
 import { DesktopNavbar } from "../../components/Navbar/Desktop/DesktopNavbar";
-import { ProfileContext } from "../../context/ProfileContext";
+import { ProfileContext } from "../../contexts/ProfileContext";
 import { OutlinedInput } from "../../components/common/FormControls";
 import { IconLabelTabs } from "../../components/common/Tabs";
 import { SearchPage } from "../../pages/SearchPage/SearchPage";

@@ -5,11 +5,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import { AuthRoutes } from "../routes/AuthRoutes";
 import { useAuth } from "../hooks/authHook";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../contexts/AuthContext";
 
 import "./App.module.scss";
 import { useHttp } from "../hooks/httpHook";
-import { ProfileContext } from "../context/ProfileContext";
+import { ProfileContext } from "../contexts/ProfileContext";
 import { Spinner } from "../components/common/FormControls";
 import { loginSocketEmit } from "../utils/Sockets/emitSockets";
 import { MobileTabletRoutes } from "../routes/MobileTabletRoutes";

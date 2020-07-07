@@ -5,7 +5,7 @@ import { Spinner } from "../common/FormControls";
 import { NavLink } from "react-router-dom";
 import { DialogItem } from "./DialogItem";
 import { CHAT } from "../../constants/url";
-import { ProfileContext } from "../../context/ProfileContext";
+import { ProfileContext } from "../../contexts/ProfileContext";
 
 export const Dialogs = () => {
   const { request, loading } = useHttp();

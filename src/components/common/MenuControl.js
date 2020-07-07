@@ -15,7 +15,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 //Contants
 import { SETTINGS, CHAT } from "../../constants/url";
 //Context
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../contexts/AuthContext";
 //Sockets
 import { logoutSocketEmit } from "../../utils/Sockets/emitSockets";
 //Modal window
