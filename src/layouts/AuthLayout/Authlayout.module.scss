@@ -53,17 +53,14 @@
     .circles1 {
       width: 30px;
       height: 30px;
-      animation: circles 1.4s ease-in-out infinite alternate;
     }
     .circles2 {
       width: 60px;
       height: 60px;
-      animation: circles 1.2s ease-in-out infinite alternate;
     }
     .circles3 {
       width: 90px;
       height: 90px;
-      animation: circles 1s ease-in-out infinite alternate;
     }
   }
   form {
@@ -89,14 +86,5 @@
     form {
       width: 90%;
     }
-  }
-}
-
-@keyframes circles {
-  from {
-    margin-top: -1em;
-  }
-  to {
-    margin-top: 1em;
   }
 }

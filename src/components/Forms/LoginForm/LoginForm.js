@@ -21,6 +21,9 @@ import { useHttp } from "../../../hooks/httpHook";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { authenticatedSocketEmit } from "../../../utils/Sockets/emitSockets";
 
+import { motion } from "framer-motion";
+import { containerVariants } from "../../../routes/AuthRoutes";
+
 export const LoginForm = () => {
   const { loading, request, error, clearError } = useHttp();
   const { handleSubmit, control, errors } = useForm({
@@ -61,7 +64,14 @@ export const LoginForm = () => {
   }, [clearError]);
 
   return (
-    <form id="login" onSubmit={handleSubmit(onSubmit)}>
+    <motion.form
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      id="login"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Logo />
       <Grid container alignItems="flex-end">
         {errors.email || error ? (
@@ -182,6 +192,6 @@ export const LoginForm = () => {
       >
         Login
       </AccentButton>
-    </form>
+    </motion.form>
   );
 };
